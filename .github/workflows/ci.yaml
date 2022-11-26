@@ -7,6 +7,11 @@ on:
       - main
     paths:
       - 'web/**'
+  push:
+    branches:
+      - main
+    paths:
+      - 'web/**'
 
 jobs:
   # Run unit tests to make sure everything is 👍
