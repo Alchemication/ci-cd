@@ -29,3 +29,22 @@ jobs:
 
       - name: 'Run Tests'
         run: pytest
+
+  # Run the linter to check for code style issues
+  lint:
+    name: 'Run linter'
+    defaults:
+      run:
+        shell: bash
+        # Define the working directory for all run steps in the workflow
+        working-directory: ./web
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      name: 'Checkout repository'
+
+    - name: 'Install Dependencies'
+      run: pip install -r requirements.txt
+
+    - name: 'Run Linter'
+      run: pylint app/*.py
