@@ -1,4 +1,4 @@
-name: "My CI/CD workflow"
+name: "Continous Integration (Test & Lint)"
 
 # This workflow is triggered whenever a new PR is created on the main branch
 on:
